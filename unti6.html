@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --dark-bg: #000428;
+      --dark-end: #0a0a0a;
+      --accent1: #7f00ff;
+      --accent2: #e100ff;
+      --neon-glow: 0 0 10px rgba(127, 0, 255, 0.8), 0 0 20px rgba(225, 0, 255, 0.6);
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --font-primary: 'Poppins', sans-serif;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-primary);
+      background: radial-gradient(circle at center, var(--dark-bg), var(--dark-end));
+      color: #fff;
+      overflow-x: hidden;
+    }
+    section { padding: 60px 20px; }
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    #hero .content {
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: var(--neon-glow);
+    }
+    .typing {
+      display: inline;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: caret 0.8s infinite;
+    }
+    @keyframes caret {
+      50% { border-color: transparent; }
+    }
+    #tagline {
+      font-size: 1.6rem;
+      margin-top: 20px;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards 1s;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    #punch {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 1s ease forwards 2s;
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    }
+    @keyframes fadeIn { to { opacity: 1; } }
+    @keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+    .btn-group { margin-top: 30px; }
+    .btn {
+      margin: 0 10px;
+      padding: 12px 24px;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      background: linear-gradient(90deg, var(--accent1), var(--accent2));
+      color: #fff;
+      text-decoration: none;
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 10px rgba(127, 0, 255, 0.6);
+    }
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 20px rgba(127, 0, 255, 0.9);
+    }
+    #about { display: flex; justify-content: center; }
+    .about-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 850px;
+      box-shadow: 0 0 20px rgba(127, 0, 255, 0.3);
+      opacity: 0;
+      animation: slideUp 1s ease forwards 3s;
+    }
+    .about-card h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #fff;
+      text-shadow: var(--neon-glow);
+    }
+    .about-card p {
+      line-height: 1.7;
+      margin-bottom: 15px;
+    }
+    .skills { margin-top: 20px; }
+    .skills h3 {
+      text-align: center;
+      margin-bottom: 15px;
+      color: #fff;
+      text-shadow: 0 0 8px rgba(225, 0, 255, 0.6);
+    }
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .skills li {
+      background: linear-gradient(145deg, rgba(127,0,255,0.4), rgba(225,0,255,0.3));
+      padding: 10px 20px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(127, 0, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <section id="hero">
+    <canvas id="particles"></canvas>
+    <div class="content">
+      <h1><span id="alpha" class="typing"></span></h1>
+      <div id="tagline">Built to Lead, Born to Conquer.</div>
+      <div id="punch">Commanding Innovation, Defining the Future.</div>
+      <div class="btn-group">
+        <a href="#about" class="btn">About Me</a>
+        <a href="mailto:alphacreats17@gmail.com" class="btn">Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-card">
+      <h2>About Me</h2>
+      <p><strong>ALHAMDULILLAH</strong></p>
+      <p>Born on <strong>17 November 2010</strong> in the vibrant city of <strong>Bangalore, India</strong>. Currently studying in <strong>Class 10 at Noble Saint English School</strong>.</p>
+      <p>I proudly own the brand name <strong>“Alpha”</strong>—a symbol of power, leadership, and innovation. I am not a common man; I am destined to conquer.</p>
+      <div class="skills">
+        <h3>Skills</h3>
+        <ul>
+          <li>Vibe Coder 💻</li>
+          <li>Graphic Designer 🎨</li>
+          <li>Web App Deployer 🌐</li>
+          <li>SEO Management 📈</li>
+          <li>Video Editing 🎬</li>
+          <li>More booting soon...</li>
+        </ul>
+      </div>
+      <p><em>Everything I create is only by the <strong>Grace of Allah Almighty</strong>.</em></p>
+    </div>
+  </section>
+
+  <script>
+    const text = "Alpha";
+    let idx = 0;
+    const alphaEl = document.getElementById("alpha");
+    function type() {
+      if (idx < text.length) {
+        alphaEl.textContent += text.charAt(idx);
+        idx++;
+        setTimeout(type, 150);
+      } else {
+        alphaEl.classList.remove("typing");
+      }
+    }
+    window.onload = () => {
+      type();
+    };
+  </script>
+</body>
+</html>
